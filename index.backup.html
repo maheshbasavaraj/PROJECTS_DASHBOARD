@@ -1,0 +1,279 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mahesh - Projects Dashboard</title>
+<style>
+:root{--bg:#0b1020;--card:#131a2e;--bd:#25304d;--fg:#e6eaf5;--mu:#8b97b5;--ac:#6ea8fe}
+*{box-sizing:border-box}body{margin:0;font:14px/1.5 system-ui,Segoe UI,sans-serif;background:var(--bg);color:var(--fg)}
+.wrap{max-width:1300px;margin:0 auto;padding:24px}h1{margin:0 0 4px;font-size:26px}.sub{color:var(--mu);margin-bottom:18px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:18px}
+.kpi{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px}.kpi b{font-size:26px;display:block}.kpi span{color:var(--mu)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;align-items:center}
+input[type=search]{flex:1;min-width:220px;padding:9px 12px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--fg)}
+.chip{background:var(--card);color:var(--fg);border:1px solid var(--bd);border-radius:999px;padding:6px 12px;cursor:pointer}.chip.on{border-color:var(--ac);background:#1b2748}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.card header{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.card h3{margin:0;font-size:16px}
+.st{background:color-mix(in srgb,var(--c) 18%,transparent);color:var(--c);border:1px solid var(--c);padding:1px 9px;border-radius:999px;font-size:12px;white-space:nowrap}
+.meta{color:var(--mu);font-size:12px;margin:0}.card p{margin:2px 0}
+.bar{height:7px;background:#0d1326;border-radius:6px;overflow:hidden;margin-top:4px}.bar i{display:block;height:100%}small{color:var(--mu)}
+details{background:#0f1730;border-radius:8px;padding:6px 10px}summary{cursor:pointer;color:var(--ac)}.path{font-family:Consolas,monospace;font-size:12px;color:var(--mu);word-break:break-all}
+nav{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap;padding-top:6px}nav a{color:var(--ac);border:1px solid var(--bd);border-radius:8px;padding:4px 10px;text-decoration:none}nav a.go{background:var(--ac);color:#06122b;border-color:var(--ac);font-weight:600}
+.ping{font-weight:600}.ping.up{color:#22c55e}.ping.down{color:#ef4444}
+h2{margin:34px 0 10px}table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--bd);vertical-align:top;font-size:13px}th{background:#0f1730;color:var(--mu)}
+.note{color:var(--mu);font-size:12px;margin-top:20px}
+</style></head><body><div class="wrap">
+<h1>Projects Dashboard</h1>
+<div class="sub">Everything built in Hermes + everything under F:\AI Projects. Generated 2026-09-29. Live badges ping your local servers when you open this page.</div>
+<div class="kpis">
+<div class="kpi"><b>28</b><span>projects tracked</span></div>
+<div class="kpi"><b>12</b><span>built/worked in Hermes</span></div>
+<div class="kpi"><b id="liveN">-</b><span>servers up right now</span></div>
+<div class="kpi"><b>68%</b><span>average progress (estimate)</span></div>
+<div class="kpi"><b>2</b><span>blocked / parked</span></div>
+</div>
+<div class="tools"><input type="search" id="q" placeholder="Search projects...">
+<button class="chip on" data-f="all">All</button><button class="chip" data-f="hermes">Built in Hermes</button><button class="chip" data-f="live"><b style="color:#22c55e">2</b> Live</button><button class="chip" data-f="working"><b style="color:#38bdf8">3</b> Working</button><button class="chip" data-f="progress"><b style="color:#f59e0b">3</b> In progress</button><button class="chip" data-f="blocked"><b style="color:#ef4444">1</b> Blocked</button><button class="chip" data-f="parked"><b style="color:#a78bfa">1</b> Parked</button><button class="chip" data-f="done"><b style="color:#10b981">5</b> Done</button><button class="chip" data-f="archive"><b style="color:#94a3b8">13</b> Archived / unverified</button></div>
+<section class="grid" id="grid">
+<article class="card" data-status="live" data-src="hermes" data-cat="Education / Games" data-q="cpu rush interactive os teaching game. 7 modes: scheduler, page replacement, disk, allocation, deadlock (banker&#x27;s), virtual memory, file systems. education / games" data-port="3000" data-url="http://127.0.0.1:3000/" data-i="0">
+<header><h3>CPU RUSH</h3><span class="st" style="--c:#22c55e">Live</span></header>
+<p class="meta">Education / Games &middot; last change 2026-09-28 &middot; built in Hermes <span class="ping" id="ping0">checking...</span></p>
+<p>Interactive OS teaching game. 7 modes: scheduler, page replacement, disk, allocation, deadlock (Banker&#x27;s), virtual memory, file systems.</p>
+<div class="bar"><i style="width:85%;background:#22c55e"></i></div><small>85% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> All 7 modes start and return correct puzzle payloads (verify.js all-green); README + GitHub push done; HIT/MISS + controls UI fix.</p><p><b>Open / next:</b> Gameplay/grading not verified end-to-end for every mode; server can serve stale code; no public deploy yet.</p><p class="path">C:\Users\MAHESH\OneDrive\Documents\ChatGPT\OS</p></details>
+<nav><a class="go" href="http://127.0.0.1:3000/" target="_blank">Open live</a> <a href="file:///C:/Users/MAHESH/OneDrive/Documents/ChatGPT/OS">Folder</a> <a href="https://github.com/maheshbasavaraj/cpu-rush" target="_blank">GitHub</a></nav></article>
+<article class="card" data-status="live" data-src="hermes" data-cat="Education / Games" data-q="dsds - data structure design studio learn data structures by choosing under constraints: story, pick a-d, score 1-5 with feedback. fastapi web app, 6-step progressive track. education / games" data-port="8000" data-url="http://127.0.0.1:8000/" data-i="1">
+<header><h3>DSDS - Data Structure Design Studio</h3><span class="st" style="--c:#22c55e">Live</span></header>
+<p class="meta">Education / Games &middot; last change 2026-08-07 &middot; built in Hermes <span class="ping" id="ping1">checking...</span></p>
+<p>Learn data structures by choosing under constraints: story, pick A-D, score 1-5 with feedback. FastAPI web app, 6-step progressive track.</p>
+<div class="bar"><i style="width:90%;background:#22c55e"></i></div><small>90% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Web app, tests, Dockerfile, render.yaml, GitHub repo, DEPLOY.md.</p><p><b>Open / next:</b> Render deploy not live (dsds.onrender.com returns 404). Students need a public HTTPS URL.</p><p class="path">F:\AI Projects\dsds</p></details>
+<nav><a class="go" href="http://127.0.0.1:8000/" target="_blank">Open live</a> <a href="file:///F:/AI%20Projects/dsds">Folder</a> <a href="https://github.com/maheshbasavaraj/dsds" target="_blank">GitHub</a></nav></article>
+<article class="card" data-status="progress" data-src="hermes" data-cat="Games" data-q="alien shooter 3d three.js 3d shooter built from original game data files: 24 monsters, 10 weapons, campaign + survive modes. later p5.js remake (index2.html). games" data-port="8081" data-url="http://127.0.0.1:8081/index2.html" data-i="2">
+<header><h3>Alien Shooter 3D</h3><span class="st" style="--c:#f59e0b">In progress</span></header>
+<p class="meta">Games &middot; last change 2026-07-06 &middot; built in Hermes <span class="ping" id="ping2">checking...</span></p>
+<p>Three.js 3D shooter built from original game data files: 24 monsters, 10 weapons, campaign + survive modes. Later p5.js remake (index2.html).</p>
+<div class="bar"><i style="width:70%;background:#f59e0b"></i></div><small>70% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Built Jun 8; 5 improvement iterations (sound, reload, hit flash, damage numbers); empty-landscape/no-enemies bug worked on.</p><p><b>Open / next:</b> Session on 29 Sep: add a new gameplay level to the original GameTop Alien Shooter install (in progress). No git repo.</p><p class="path">F:\AI Projects\alien-shooter-3d</p></details>
+<nav><a class="go" href="http://127.0.0.1:8081/index2.html" target="_blank">Open live</a> <a href="file:///F:/AI%20Projects/alien-shooter-3d">Folder</a></nav></article>
+<article class="card" data-status="blocked" data-src="hermes" data-cat="AI / Media" data-q="kannada dub (youtube en to kn audio) pipeline: download, asr (faster-whisper), translate, indicf5 tts, mix. dubbing stays local by choice. ai / media" data-i="3">
+<header><h3>Kannada Dub (YouTube EN to Kn audio)</h3><span class="st" style="--c:#ef4444">Blocked</span></header>
+<p class="meta">AI / Media &middot; last change 2026-09-25 &middot; built in Hermes </p>
+<p>Pipeline: download, ASR (faster-whisper), translate, IndicF5 TTS, mix. Dubbing stays local by choice.</p>
+<div class="bar"><i style="width:65%;background:#ef4444"></i></div><small>65% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Stages s1 (download/audio split) working; pipeline, docs, verify.py, refs and models in place.</p><p><b>Open / next:</b> GPU ASR crashed on 23 Sep: cublas64_12.dll not found (CUDA runtime). Re-run to confirm whether fixed since.</p><p class="path">F:\AI Projects\kannada-dub</p></details>
+<nav><a href="file:///F:/AI%20Projects/kannada-dub">Folder</a></nav></article>
+<article class="card" data-status="progress" data-src="hermes" data-cat="AI Tools" data-q="unclutter (openrouter provider) jev-based browser extension (wxt/typescript). adding openrouter as a model provider. ai tools" data-i="4">
+<header><h3>Unclutter (OpenRouter provider)</h3><span class="st" style="--c:#f59e0b">In progress</span></header>
+<p class="meta">AI Tools &middot; last change 2026-09-28 &middot; built in Hermes </p>
+<p>Jev-based browser extension (WXT/TypeScript). Adding OpenRouter as a model provider.</p>
+<div class="bar"><i style="width:60%;background:#f59e0b"></i></div><small>60% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Provider code (lib/providers.ts, lib/model.ts) reviewed and extended in the 28 Sep session.</p><p><b>Open / next:</b> 18 uncommitted changes; not confirmed built and tested end-to-end.</p><p class="path">F:\AI Projects\unclutter\unclutter</p></details>
+<nav><a href="file:///F:/AI%20Projects/unclutter/unclutter">Folder</a></nav></article>
+<article class="card" data-status="parked" data-src="hermes" data-cat="AI Tools" data-q="jev mail classifier email triage with jev + openrouter. 8 categories (spam, security, receipt, academic, action, personal, newsletter, promotion) with thresholds and actions. ai tools" data-i="5">
+<header><h3>JEV Mail Classifier</h3><span class="st" style="--c:#a78bfa">Parked</span></header>
+<p class="meta">AI Tools &middot; last change 2026-09-21 &middot; built in Hermes </p>
+<p>Email triage with Jev + OpenRouter. 8 categories (spam, security, receipt, academic, action, personal, newsletter, promotion) with thresholds and actions.</p>
+<div class="bar"><i style="width:70%;background:#a78bfa"></i></div><small>70% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> config.suggested.yaml built and tested with real Jev calls on subject lines.</p><p><b>Open / next:</b> Parked. Needs IMAP_USERNAME / IMAP_PASSWORD in .env, merge categories into config.yaml, run jev-mail run --dry-run.</p><p class="path">F:\AI Projects\JEVMAIL\jev-mail-classifier</p></details>
+<nav><a href="file:///F:/AI%20Projects/JEVMAIL/jev-mail-classifier">Folder</a> <a href="https://github.com/parth-kp/jev-mail-classifier" target="_blank">GitHub</a></nav></article>
+<article class="card" data-status="progress" data-src="hermes" data-cat="Education / Games" data-q="learning platform (game forge + dsds + swe quiz) one fastapi origin hosting three learning modules, docker compose, single student url. education / games" data-i="6">
+<header><h3>Learning Platform (Game Forge + DSDS + SWE Quiz)</h3><span class="st" style="--c:#f59e0b">In progress</span></header>
+<p class="meta">Education / Games &middot; last change 2026-08-27 &middot; built in Hermes </p>
+<p>One FastAPI origin hosting three learning modules, Docker compose, single student URL.</p>
+<div class="bar"><i style="width:75%;background:#f59e0b"></i></div><small>75% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Platform app, hub, Dockerfile, docker-compose, DEPLOY.md, all three modules vendored in.</p><p><b>Open / next:</b> Not deployed publicly; not run in this session (needs Docker Desktop: docker compose up --build, then localhost:8080).</p><p class="path">F:\AI Projects\project-platform</p></details>
+<nav><a href="file:///F:/AI%20Projects/project-platform">Folder</a></nav></article>
+<article class="card" data-status="working" data-src="hermes" data-cat="Education / Games" data-q="game forge (educational game mcp) mcp server that builds single-file educational browser games. tools: build_game_prompt, save_game, list_games, review_checklist. education / games" data-i="7">
+<header><h3>Game Forge (Educational Game MCP)</h3><span class="st" style="--c:#38bdf8">Working</span></header>
+<p class="meta">Education / Games &middot; last change 2026-08-05 &middot; built in Hermes </p>
+<p>MCP server that builds single-file educational browser games. Tools: build_game_prompt, save_game, list_games, review_checklist.</p>
+<div class="bar"><i style="width:80%;background:#38bdf8"></i></div><small>80% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> System prompt, MCP tools, 5 sample games (factorial, fibonacci, fraction-catch, tower-of-hanoi, verify-pipeline), Ollama driver.</p><p><b>Open / next:</b> Run with: python app.py (port 8000, so stop DSDS first or change port).</p><p class="path">F:\AI Projects\project-platform\game_MCP</p></details>
+<nav><a href="file:///F:/AI%20Projects/project-platform/game_MCP">Folder</a> <a href="https://github.com/maheshbasavaraj/game_MCP" target="_blank">GitHub</a></nav></article>
+<article class="card" data-status="done" data-src="hermes" data-cat="Research / Writing" data-q="bioe3 bio-ai proposal (dbt-birac) full proposal draft for the dbt-birac bio-ai call: hub-and-spoke consortium, work packages, budget, risks, verified arxiv citations. research / writing" data-i="8">
+<header><h3>BIOE3 Bio-AI Proposal (DBT-BIRAC)</h3><span class="st" style="--c:#10b981">Done</span></header>
+<p class="meta">Research / Writing &middot; last change 2026-06-19 &middot; built in Hermes </p>
+<p>Full proposal draft for the DBT-BIRAC Bio-AI call: hub-and-spoke consortium, work packages, budget, risks, verified arXiv citations.</p>
+<div class="bar"><i style="width:100%;background:#10b981"></i></div><small>100% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Proposal, budget template, quick reference, research notes; supporting arXiv pulls in dbt_birac_bioai/.</p><p><b>Open / next:</b> Call deadline was 30 Jun 2026 (passed). Partner names/PI details were placeholders.</p><p class="path">F:\AI Projects\BIOE3_BioAI_Proposal</p></details>
+<nav><a href="file:///F:/AI%20Projects/BIOE3_BioAI_Proposal">Folder</a></nav></article>
+<article class="card" data-status="done" data-src="hermes" data-cat="Research / Writing" data-q="socratic instructor playbook (os) socratic instructor playbook for an os syllabus, matched to the structure of the mlops playbook example. research / writing" data-i="9">
+<header><h3>Socratic Instructor Playbook (OS)</h3><span class="st" style="--c:#10b981">Done</span></header>
+<p class="meta">Research / Writing &middot; last change 2026-09-28 &middot; built in Hermes </p>
+<p>Socratic instructor playbook for an OS syllabus, matched to the structure of the MLOps playbook example.</p>
+<div class="bar"><i style="width:100%;background:#10b981"></i></div><small>100% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Playbook built; README with syllabus map pushed to GitHub.</p><p><b>Open / next:</b> None known.</p><p class="path">C:\Users\MAHESH\OneDrive\Documents\ChatGPT\OS</p></details>
+<nav><a href="file:///C:/Users/MAHESH/OneDrive/Documents/ChatGPT/OS">Folder</a> <a href="https://github.com/maheshbasavaraj/cpu-rush" target="_blank">GitHub</a></nav></article>
+<article class="card" data-status="done" data-src="hermes" data-cat="Research / Writing" data-q="agentic-q paper (revised) academic paper polish: reviewer-comment revision and ai-detector humanization. research / writing" data-i="10">
+<header><h3>Agentic-Q paper (revised)</h3><span class="st" style="--c:#10b981">Done</span></header>
+<p class="meta">Research / Writing &middot; last change 2026-07-23 &middot; built in Hermes </p>
+<p>Academic paper polish: reviewer-comment revision and AI-detector humanization.</p>
+<div class="bar"><i style="width:90%;background:#10b981"></i></div><small>90% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Revised + final DOCX/DOCM, reviewer comment JSONs, rendered output.</p><p><b>Open / next:</b> Turnitin AI % target (&lt;=30%) not confirmed here.</p><p class="path">F:\AI Projects\agentic-q</p></details>
+<nav><a href="file:///F:/AI%20Projects/agentic-q">Folder</a></nav></article>
+<article class="card" data-status="working" data-src="hermes" data-cat="Teaching / FDP" data-q="agentic ai - saksham / fdp agentic ai faculty-development workspace: app (agents, workflows), game-mcp, patent-prior-art-mcp, teacher (dsatm-fdp batch 1). teaching / fdp" data-i="11">
+<header><h3>Agentic AI - Saksham / FDP</h3><span class="st" style="--c:#38bdf8">Working</span></header>
+<p class="meta">Teaching / FDP &middot; last change 2026-07-31 &middot; built in Hermes </p>
+<p>Agentic AI faculty-development workspace: App (agents, workflows), game-mcp, patent-prior-art-mcp, Teacher (DSATM-FDP batch 1).</p>
+<div class="bar"><i style="width:70%;background:#38bdf8"></i></div><small>70% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> App, MCP servers, Teacher material; private GitHub repo.</p><p><b>Open / next:</b> Uses fdp\Scripts\python.exe. Not run in this session.</p><p class="path">F:\Agentic AI saksham</p></details>
+<nav><a href="file:///F:/Agentic%20AI%20saksham">Folder</a> <a href="https://github.com/maheshbasavaraj/Agentic-AI-saksham" target="_blank">GitHub</a></nav></article>
+<article class="card" data-status="archive" data-src="folder" data-cat="AI / Vision" data-q="pi ad blocker ad-blocker experiments (benchmarks, configs, demo_advanced.py, video checks). ai / vision" data-i="12">
+<header><h3>Pi Ad Blocker</h3><span class="st" style="--c:#94a3b8">Archived / unverified</span></header>
+<p class="meta">AI / Vision &middot; last change 2026-06-10 &middot; found in F: folders </p>
+<p>Ad-blocker experiments (benchmarks, configs, demo_advanced.py, video checks).</p>
+<div class="bar"><i style="width:50%;background:#94a3b8"></i></div><small>50% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Code and benchmarks present.</p><p><b>Open / next:</b> Status not verified; folder inspected only by name.</p><p class="path">F:\AI Projects\pi-ad-blocker</p></details>
+<nav><a href="file:///F:/AI%20Projects/pi-ad-blocker">Folder</a></nav></article>
+<article class="card" data-status="archive" data-src="folder" data-cat="AI / Vision" data-q="meme gen / ar ad blocker meme generator and ar ad-blocker tries (try -1 to try4, speckit, gemini chat log). ai / vision" data-i="13">
+<header><h3>Meme Gen / AR Ad Blocker</h3><span class="st" style="--c:#94a3b8">Archived / unverified</span></header>
+<p class="meta">AI / Vision &middot; last change 2026-09-01 &middot; found in F: folders </p>
+<p>Meme generator and AR ad-blocker tries (try -1 to Try4, speckit, gemini chat log).</p>
+<div class="bar"><i style="width:50%;background:#94a3b8"></i></div><small>50% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Multiple attempts kept.</p><p><b>Open / next:</b> Status not verified.</p><p class="path">F:\AI Projects\MEME GEN</p></details>
+<nav><a href="file:///F:/AI%20Projects/MEME%20GEN">Folder</a></nav></article>
+<article class="card" data-status="archive" data-src="folder" data-cat="Research / Writing" data-q="patenter patent drafting workspace (forms, dsatm patent, antigravity version). research / writing" data-i="14">
+<header><h3>Patenter</h3><span class="st" style="--c:#94a3b8">Archived / unverified</span></header>
+<p class="meta">Research / Writing &middot; last change 2026-04-26 &middot; found in F: folders </p>
+<p>Patent drafting workspace (forms, DSATM patent, antigravity version).</p>
+<div class="bar"><i style="width:50%;background:#94a3b8"></i></div><small>50% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Drafts and forms present.</p><p><b>Open / next:</b> Status not verified.</p><p class="path">F:\AI Projects\patenter</p></details>
+<nav><a href="file:///F:/AI%20Projects/patenter">Folder</a></nav></article>
+<article class="card" data-status="archive" data-src="folder" data-cat="Tools" data-q="ppt generator generates ppt from a given video. tools" data-i="15">
+<header><h3>PPT Generator</h3><span class="st" style="--c:#94a3b8">Archived / unverified</span></header>
+<p class="meta">Tools &middot; last change 2026-04-27 &middot; found in F: folders </p>
+<p>Generates PPT from a given video.</p>
+<div class="bar"><i style="width:60%;background:#94a3b8"></i></div><small>60% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> app.py, main.py, generator, sample output.</p><p><b>Open / next:</b> Status not verified.</p><p class="path">F:\AI Projects\pptgen</p></details>
+<nav><a href="file:///F:/AI%20Projects/pptgen">Folder</a> <a href="https://github.com/maheshbasavaraj/PPTGenerator" target="_blank">GitHub</a></nav></article>
+<article class="card" data-status="archive" data-src="folder" data-cat="Tools" data-q="certificate generator bulk certificate pdfs from a student list. tools" data-i="16">
+<header><h3>Certificate Generator</h3><span class="st" style="--c:#94a3b8">Archived / unverified</span></header>
+<p class="meta">Tools &middot; last change 2026-04-26 &middot; found in F: folders </p>
+<p>Bulk certificate PDFs from a student list.</p>
+<div class="bar"><i style="width:80%;background:#94a3b8"></i></div><small>80% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> cert_gen.py with generated certificate PDFs.</p><p><b>Open / next:</b> Status not verified.</p><p class="path">F:\AI Projects\CertificateGen</p></details>
+<nav><a href="file:///F:/AI%20Projects/CertificateGen">Folder</a></nav></article>
+<article class="card" data-status="done" data-src="folder" data-cat="Tools" data-q="vtu marks extractor extracts marks from result pdfs into an excel sheet for the whole class. tools" data-i="17">
+<header><h3>VTU Marks Extractor</h3><span class="st" style="--c:#10b981">Done</span></header>
+<p class="meta">Tools &middot; last change 2026-04-26 &middot; found in F: folders </p>
+<p>Extracts marks from result PDFs into an Excel sheet for the whole class.</p>
+<div class="bar"><i style="width:90%;background:#10b981"></i></div><small>90% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Built exe (dist/build), extracted_marks.xlsx produced.</p><p><b>Open / next:</b> Status not verified beyond outputs.</p><p class="path">F:\AI Projects\MARKS extractor</p></details>
+<nav><a href="file:///F:/AI%20Projects/MARKS%20extractor">Folder</a> <a href="https://github.com/maheshbasavaraj/VTU-Marks-extracter" target="_blank">GitHub</a></nav></article>
+<article class="card" data-status="archive" data-src="folder" data-cat="Tools" data-q="doc gen (qp generator) question-paper docx generator (deep learning bcd601). tools" data-i="18">
+<header><h3>Doc Gen (QP generator)</h3><span class="st" style="--c:#94a3b8">Archived / unverified</span></header>
+<p class="meta">Tools &middot; last change 2026-04-26 &middot; found in F: folders </p>
+<p>Question-paper DOCX generator (Deep Learning BCD601).</p>
+<div class="bar"><i style="width:60%;background:#94a3b8"></i></div><small>60% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> generator.py + sample QP.</p><p><b>Open / next:</b> Status not verified.</p><p class="path">F:\AI Projects\Doc gen</p></details>
+<nav><a href="file:///F:/AI%20Projects/Doc%20gen">Folder</a></nav></article>
+<article class="card" data-status="archive" data-src="folder" data-cat="Research / Writing" data-q="extropic / thermodynamic computing papers on thermodynamic computing for fusion energy. research / writing" data-i="19">
+<header><h3>Extropic / Thermodynamic Computing</h3><span class="st" style="--c:#94a3b8">Archived / unverified</span></header>
+<p class="meta">Research / Writing &middot; last change 2026-04-26 &middot; found in F: folders </p>
+<p>Papers on thermodynamic computing for fusion energy.</p>
+<div class="bar"><i style="width:50%;background:#94a3b8"></i></div><small>50% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Two DOCX drafts, paper.pdf, thrml source.</p><p><b>Open / next:</b> Status not verified.</p><p class="path">F:\AI Projects\extropic</p></details>
+<nav><a href="file:///F:/AI%20Projects/extropic">Folder</a></nav></article>
+<article class="card" data-status="archive" data-src="folder" data-cat="Research / Writing" data-q="articles (ai patent white paper, vr edu survey) white paper and survey drafts. research / writing" data-i="20">
+<header><h3>Articles (AI patent white paper, VR edu survey)</h3><span class="st" style="--c:#94a3b8">Archived / unverified</span></header>
+<p class="meta">Research / Writing &middot; last change 2026-08-20 &middot; found in F: folders </p>
+<p>White paper and survey drafts.</p>
+<div class="bar"><i style="width:60%;background:#94a3b8"></i></div><small>60% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> AI_Patent_White_Paper_2025, decentralized VR edu survey, extropic.</p><p><b>Open / next:</b> Status not verified.</p><p class="path">F:\AI Projects\Articles</p></details>
+<nav><a href="file:///F:/AI%20Projects/Articles">Folder</a></nav></article>
+<article class="card" data-status="archive" data-src="folder" data-cat="Teaching / FDP" data-q="lab (agentic ai, aiml, genai) lab manuals and programs. teaching / fdp" data-i="21">
+<header><h3>Lab (Agentic AI, AIML, GenAI)</h3><span class="st" style="--c:#94a3b8">Archived / unverified</span></header>
+<p class="meta">Teaching / FDP &middot; last change 2026-04-26 &middot; found in F: folders </p>
+<p>Lab manuals and programs.</p>
+<div class="bar"><i style="width:60%;background:#94a3b8"></i></div><small>60% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Three lab folders.</p><p><b>Open / next:</b> Status not verified.</p><p class="path">F:\AI Projects\lab</p></details>
+<nav><a href="file:///F:/AI%20Projects/lab">Folder</a> <a href="https://github.com/maheshbasavaraj/GENAI_LAB" target="_blank">GitHub</a></nav></article>
+<article class="card" data-status="archive" data-src="folder" data-cat="Education / Games" data-q="quiz / set / buttercloud quiz buttercloud quiz app with several backups. education / games" data-i="22">
+<header><h3>Quiz / SET / ButterCloud Quiz</h3><span class="st" style="--c:#94a3b8">Archived / unverified</span></header>
+<p class="meta">Education / Games &middot; last change 2026-04-27 &middot; found in F: folders </p>
+<p>ButterCloud quiz app with several backups.</p>
+<div class="bar"><i style="width:60%;background:#94a3b8"></i></div><small>60% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> App + backups.</p><p><b>Open / next:</b> Status not verified.</p><p class="path">F:\AI Projects\SET</p></details>
+<nav><a href="file:///F:/AI%20Projects/SET">Folder</a> <a href="https://github.com/maheshbasavaraj/SWE_QUIZ" target="_blank">GitHub</a></nav></article>
+<article class="card" data-status="archive" data-src="folder" data-cat="AI / Media" data-q="youtube channel content story scripts and prompts, sample video. ai / media" data-i="23">
+<header><h3>YouTube Channel content</h3><span class="st" style="--c:#94a3b8">Archived / unverified</span></header>
+<p class="meta">AI / Media &middot; last change 2026-04-27 &middot; found in F: folders </p>
+<p>Story scripts and prompts, sample video.</p>
+<div class="bar"><i style="width:40%;background:#94a3b8"></i></div><small>40% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Scripts and one MP4.</p><p><b>Open / next:</b> Status not verified.</p><p class="path">F:\AI Projects\youtube channel</p></details>
+<nav><a href="file:///F:/AI%20Projects/youtube%20channel">Folder</a></nav></article>
+<article class="card" data-status="archive" data-src="folder" data-cat="AI Tools" data-q="agent (telegram to whatsapp) agent scripts incl. telegram_to_whatsapp_agent.py. ai tools" data-i="24">
+<header><h3>Agent (Telegram to WhatsApp)</h3><span class="st" style="--c:#94a3b8">Archived / unverified</span></header>
+<p class="meta">AI Tools &middot; last change 2026-04-26 &middot; found in F: folders </p>
+<p>Agent scripts incl. telegram_to_whatsapp_agent.py.</p>
+<div class="bar"><i style="width:50%;background:#94a3b8"></i></div><small>50% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Scripts + README.</p><p><b>Open / next:</b> Status not verified.</p><p class="path">F:\AI Projects\Agent</p></details>
+<nav><a href="file:///F:/AI%20Projects/Agent">Folder</a> <a href="https://github.com/maheshbasavaraj/Agent_fdp" target="_blank">GitHub</a></nav></article>
+<article class="card" data-status="archive" data-src="folder" data-cat="AI / Vision" data-q="face recognition / anti-spoofing face recognition with silent-face-anti-spoofing. ai / vision" data-i="25">
+<header><h3>Face Recognition / Anti-Spoofing</h3><span class="st" style="--c:#94a3b8">Archived / unverified</span></header>
+<p class="meta">AI / Vision &middot; last change 2026-06-04 &middot; found in F: folders </p>
+<p>Face recognition with Silent-Face-Anti-Spoofing.</p>
+<div class="bar"><i style="width:50%;background:#94a3b8"></i></div><small>50% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Student face data and spoof repo.</p><p><b>Open / next:</b> Status not verified.</p><p class="path">F:\face recog</p></details>
+<nav><a href="file:///F:/face%20recog">Folder</a></nav></article>
+<article class="card" data-status="done" data-src="folder" data-cat="DevOps" data-q="ci/cd demos (cicd, mlops-cicd) ci/cd demo with train.py and tests; mlops pipeline. devops" data-i="26">
+<header><h3>CI/CD demos (CICD, mlops-cicd)</h3><span class="st" style="--c:#10b981">Done</span></header>
+<p class="meta">DevOps &middot; last change 2026-09-01 &middot; found in F: folders </p>
+<p>CI/CD demo with train.py and tests; MLOps pipeline.</p>
+<div class="bar"><i style="width:90%;background:#10b981"></i></div><small>90% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> Repos pushed (CICD, CI, cd, mlops-cicd).</p><p><b>Open / next:</b> None known.</p><p class="path">F:\CICD</p></details>
+<nav><a href="file:///F:/CICD">Folder</a> <a href="https://github.com/maheshbasavaraj/mlops-cicd" target="_blank">GitHub</a></nav></article>
+<article class="card" data-status="working" data-src="folder" data-cat="AI / Media" data-q="comfyui + wan2gp (media gen) local image/video generation installs. ai / media" data-i="27">
+<header><h3>ComfyUI + Wan2GP (media gen)</h3><span class="st" style="--c:#38bdf8">Working</span></header>
+<p class="meta">AI / Media &middot; last change 2026-05-28 &middot; found in F: folders </p>
+<p>Local image/video generation installs.</p>
+<div class="bar"><i style="width:60%;background:#38bdf8"></i></div><small>60% (estimate)</small>
+<details><summary>Progress report</summary><p><b>Done:</b> ComfyUI-Easy-Install; Wan2GP in F:\WANGP.</p><p><b>Open / next:</b> Status not verified.</p><p class="path">F:\comfiUI</p></details>
+<nav><a href="file:///F:/comfiUI">Folder</a></nav></article>
+</section>
+<h2>Progress report</h2>
+<table><thead><tr><th>Project</th><th>Status</th><th>Progress</th><th>Done</th><th>Open / next</th></tr></thead><tbody>
+<tr><td>CPU RUSH</td><td><span class="st" style="--c:#22c55e">Live</span></td><td>85%</td><td>All 7 modes start and return correct puzzle payloads (verify.js all-green); README + GitHub push done; HIT/MISS + controls UI fix.</td><td>Gameplay/grading not verified end-to-end for every mode; server can serve stale code; no public deploy yet.</td></tr>
+<tr><td>DSDS - Data Structure Design Studio</td><td><span class="st" style="--c:#22c55e">Live</span></td><td>90%</td><td>Web app, tests, Dockerfile, render.yaml, GitHub repo, DEPLOY.md.</td><td>Render deploy not live (dsds.onrender.com returns 404). Students need a public HTTPS URL.</td></tr>
+<tr><td>Alien Shooter 3D</td><td><span class="st" style="--c:#f59e0b">In progress</span></td><td>70%</td><td>Built Jun 8; 5 improvement iterations (sound, reload, hit flash, damage numbers); empty-landscape/no-enemies bug worked on.</td><td>Session on 29 Sep: add a new gameplay level to the original GameTop Alien Shooter install (in progress). No git repo.</td></tr>
+<tr><td>Kannada Dub (YouTube EN to Kn audio)</td><td><span class="st" style="--c:#ef4444">Blocked</span></td><td>65%</td><td>Stages s1 (download/audio split) working; pipeline, docs, verify.py, refs and models in place.</td><td>GPU ASR crashed on 23 Sep: cublas64_12.dll not found (CUDA runtime). Re-run to confirm whether fixed since.</td></tr>
+<tr><td>Unclutter (OpenRouter provider)</td><td><span class="st" style="--c:#f59e0b">In progress</span></td><td>60%</td><td>Provider code (lib/providers.ts, lib/model.ts) reviewed and extended in the 28 Sep session.</td><td>18 uncommitted changes; not confirmed built and tested end-to-end.</td></tr>
+<tr><td>JEV Mail Classifier</td><td><span class="st" style="--c:#a78bfa">Parked</span></td><td>70%</td><td>config.suggested.yaml built and tested with real Jev calls on subject lines.</td><td>Parked. Needs IMAP_USERNAME / IMAP_PASSWORD in .env, merge categories into config.yaml, run jev-mail run --dry-run.</td></tr>
+<tr><td>Learning Platform (Game Forge + DSDS + SWE Quiz)</td><td><span class="st" style="--c:#f59e0b">In progress</span></td><td>75%</td><td>Platform app, hub, Dockerfile, docker-compose, DEPLOY.md, all three modules vendored in.</td><td>Not deployed publicly; not run in this session (needs Docker Desktop: docker compose up --build, then localhost:8080).</td></tr>
+<tr><td>Game Forge (Educational Game MCP)</td><td><span class="st" style="--c:#38bdf8">Working</span></td><td>80%</td><td>System prompt, MCP tools, 5 sample games (factorial, fibonacci, fraction-catch, tower-of-hanoi, verify-pipeline), Ollama driver.</td><td>Run with: python app.py (port 8000, so stop DSDS first or change port).</td></tr>
+<tr><td>BIOE3 Bio-AI Proposal (DBT-BIRAC)</td><td><span class="st" style="--c:#10b981">Done</span></td><td>100%</td><td>Proposal, budget template, quick reference, research notes; supporting arXiv pulls in dbt_birac_bioai/.</td><td>Call deadline was 30 Jun 2026 (passed). Partner names/PI details were placeholders.</td></tr>
+<tr><td>Socratic Instructor Playbook (OS)</td><td><span class="st" style="--c:#10b981">Done</span></td><td>100%</td><td>Playbook built; README with syllabus map pushed to GitHub.</td><td>None known.</td></tr>
+<tr><td>Agentic-Q paper (revised)</td><td><span class="st" style="--c:#10b981">Done</span></td><td>90%</td><td>Revised + final DOCX/DOCM, reviewer comment JSONs, rendered output.</td><td>Turnitin AI % target (&lt;=30%) not confirmed here.</td></tr>
+<tr><td>Agentic AI - Saksham / FDP</td><td><span class="st" style="--c:#38bdf8">Working</span></td><td>70%</td><td>App, MCP servers, Teacher material; private GitHub repo.</td><td>Uses fdp\Scripts\python.exe. Not run in this session.</td></tr>
+<tr><td>Pi Ad Blocker</td><td><span class="st" style="--c:#94a3b8">Archived / unverified</span></td><td>50%</td><td>Code and benchmarks present.</td><td>Status not verified; folder inspected only by name.</td></tr>
+<tr><td>Meme Gen / AR Ad Blocker</td><td><span class="st" style="--c:#94a3b8">Archived / unverified</span></td><td>50%</td><td>Multiple attempts kept.</td><td>Status not verified.</td></tr>
+<tr><td>Patenter</td><td><span class="st" style="--c:#94a3b8">Archived / unverified</span></td><td>50%</td><td>Drafts and forms present.</td><td>Status not verified.</td></tr>
+<tr><td>PPT Generator</td><td><span class="st" style="--c:#94a3b8">Archived / unverified</span></td><td>60%</td><td>app.py, main.py, generator, sample output.</td><td>Status not verified.</td></tr>
+<tr><td>Certificate Generator</td><td><span class="st" style="--c:#94a3b8">Archived / unverified</span></td><td>80%</td><td>cert_gen.py with generated certificate PDFs.</td><td>Status not verified.</td></tr>
+<tr><td>VTU Marks Extractor</td><td><span class="st" style="--c:#10b981">Done</span></td><td>90%</td><td>Built exe (dist/build), extracted_marks.xlsx produced.</td><td>Status not verified beyond outputs.</td></tr>
+<tr><td>Doc Gen (QP generator)</td><td><span class="st" style="--c:#94a3b8">Archived / unverified</span></td><td>60%</td><td>generator.py + sample QP.</td><td>Status not verified.</td></tr>
+<tr><td>Extropic / Thermodynamic Computing</td><td><span class="st" style="--c:#94a3b8">Archived / unverified</span></td><td>50%</td><td>Two DOCX drafts, paper.pdf, thrml source.</td><td>Status not verified.</td></tr>
+<tr><td>Articles (AI patent white paper, VR edu survey)</td><td><span class="st" style="--c:#94a3b8">Archived / unverified</span></td><td>60%</td><td>AI_Patent_White_Paper_2025, decentralized VR edu survey, extropic.</td><td>Status not verified.</td></tr>
+<tr><td>Lab (Agentic AI, AIML, GenAI)</td><td><span class="st" style="--c:#94a3b8">Archived / unverified</span></td><td>60%</td><td>Three lab folders.</td><td>Status not verified.</td></tr>
+<tr><td>Quiz / SET / ButterCloud Quiz</td><td><span class="st" style="--c:#94a3b8">Archived / unverified</span></td><td>60%</td><td>App + backups.</td><td>Status not verified.</td></tr>
+<tr><td>YouTube Channel content</td><td><span class="st" style="--c:#94a3b8">Archived / unverified</span></td><td>40%</td><td>Scripts and one MP4.</td><td>Status not verified.</td></tr>
+<tr><td>Agent (Telegram to WhatsApp)</td><td><span class="st" style="--c:#94a3b8">Archived / unverified</span></td><td>50%</td><td>Scripts + README.</td><td>Status not verified.</td></tr>
+<tr><td>Face Recognition / Anti-Spoofing</td><td><span class="st" style="--c:#94a3b8">Archived / unverified</span></td><td>50%</td><td>Student face data and spoof repo.</td><td>Status not verified.</td></tr>
+<tr><td>CI/CD demos (CICD, mlops-cicd)</td><td><span class="st" style="--c:#10b981">Done</span></td><td>90%</td><td>Repos pushed (CICD, CI, cd, mlops-cicd).</td><td>None known.</td></tr>
+<tr><td>ComfyUI + Wan2GP (media gen)</td><td><span class="st" style="--c:#38bdf8">Working</span></td><td>60%</td><td>ComfyUI-Easy-Install; Wan2GP in F:\WANGP.</td><td>Status not verified.</td></tr>
+</tbody></table>
+<p class="note">Method: "Built in Hermes" statuses come from your Hermes session history and verified checks. "Archived / unverified" entries were only identified by folder name, contents and last-modified date; their progress % is a rough guess. Folder dates are top-level modification times.</p>
+</div>
+<script>
+const cards=[...document.querySelectorAll('.card')];let f='all',q='';
+function apply(){cards.forEach(c=>{const okF=f==='all'||c.dataset.status===f||(f==='hermes'&&c.dataset.src==='hermes');
+c.style.display=(okF&&c.dataset.q.includes(q))?'':'none'})}
+document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');f=b.dataset.f;apply()});
+document.getElementById('q').oninput=e=>{q=e.target.value.toLowerCase();apply()};
+let up=0,total=0;
+async function ping(){up=0;total=0;await Promise.all(cards.filter(c=>c.dataset.port).map(async c=>{total++;const el=document.getElementById('ping'+c.dataset.i);
+try{const ctl=new AbortController();setTimeout(()=>ctl.abort(),2500);await fetch('http://127.0.0.1:'+c.dataset.port+'/',{mode:'no-cors',signal:ctl.signal});
+el.textContent='UP :'+c.dataset.port;el.className='ping up';up++}catch(_){el.textContent='DOWN :'+c.dataset.port;el.className='ping down'}}));
+document.getElementById('liveN').textContent=up+'/'+total}
+ping();setInterval(ping,15000);
+</script></body></html>
